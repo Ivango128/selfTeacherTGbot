@@ -1,5 +1,6 @@
 import os
 from config import path_users_directory
+from user_session import User
 
 def get_all_files_from_users_directory():
     # Путь к директории users в корневой папке
@@ -22,6 +23,6 @@ def first_power():
         base_name = os.path.basename(file)
         # Отделяем имя файла от расширения
         file_name, _ = os.path.splitext(base_name)
-        dict_user[file_name] = Users(file_name, file)
+        dict_user[file_name] = User(file_name, file)
 
     return dict_user
